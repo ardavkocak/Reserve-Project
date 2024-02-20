@@ -1,0 +1,42 @@
+-----------------------------------------------------------------------------------------
+URLDEN KOORDINAT ALMA
+
+#include <stdio.h>
+#include <curl/curl.h>
+
+// libcurl'den dönen verileri bu fonksiyonla işleyeceğiz
+size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
+{
+    // Burada contents içinde gelen verileri işleyebilirsiniz
+    // Örneğin, virgülle ayrılmış x ve y koordinatları varsa, bu veriyi parse edebilirsiniz.
+
+    return size * nmemb;
+}
+
+int main(void)
+{
+    CURL *curl;
+    CURLcode res;
+
+    curl_global_init(CURL_GLOBAL_DEFAULT);
+    curl = curl_easy_init();
+    if(curl) {
+        curl_easy_setopt(curl, CURLOPT_URL, "BURAYA_URL_GIRIN");
+
+        // Verileri bu fonksiyon ile işleyeceğiz
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+
+        // Veri işleyicisine geçirilecek olan veri yapısı (eğer ihtiyacınız varsa)
+        // curl_easy_setopt(curl, CURLOPT_WRITEDATA, &data);
+
+        res = curl_easy_perform(curl);
+
+        if(res != CURLE_OK)
+            fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
+
+        curl_easy_cleanup(curl);
+    }
+    curl_global_cleanup();
+
+    return 0;
+}

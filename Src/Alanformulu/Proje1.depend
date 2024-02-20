@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1697674071 source:c:\users\arda\desktop\projeler\proje1\main.c
+	<stdlib.h>
+	<stdio.h>
+
+1697923942 source:c:\users\arda\desktop\projeler\alanformulu\main.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
+1698858280 source:c:\users\arda\desktop\proje1\alanformulu\main.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
