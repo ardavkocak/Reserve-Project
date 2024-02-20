@@ -5,8 +5,8 @@
 #include <math.h>
 #include <graphics.h>
 
-//220202079 Berk Karaoglu
-//220202008 Arda Kocak
+//Berk Karaoglu
+//Arda Kocak
 
 float alanHesaplama(int sekil[][2],int kenarSayisi) //Bu fonksiyonda gelen sekil koordinatlarina gore alan hesabi yapilir.
 {
