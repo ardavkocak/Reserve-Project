@@ -1,10 +1,10 @@
 # Rezerv Hesaplama Projesi
 
-**C** dilinde yazılmış, **BGI grafik kütüphanesi (graphics.h)** kullanarak çok köşeli (poligon) şekillerin alanını **Shoelace (Gauss) formülü** ile hesaplayan, sonuçtan **rezerv değerini** çıkartan bir uygulama. Kocaeli Üniversitesi **Prolab 1** dersi kapsamında geliştirilmiştir.
+**C** dilinde yazılmış, **BGI grafik kütüphanesi (graphics.h)** kullanarak çok köşeli (poligon) şekillerin alanını **Shoelace (Gauss) formülü** ile hesaplayan, sonuçtan **rezerv değerini** çıkartan bir uygulama. **Prolab 1** dersi kapsamında geliştirilmiştir.
 
 ## Özellikler
 
-- **Uzaktan veri çekme**: `curl` ile `https://bilgisayar.kocaeli.edu.tr/prolab1/prolab1.txt` adresinden satır tabanlı şekil verisi indirilir
+- **Uzaktan veri çekme**: `curl` ile uzak bir sunucudan satır tabanlı şekil verisi (`prolab1.txt`) indirilir
 - **Satır seçimi**: kullanıcı, çizdirmek istediği satırın etiketini girer (1–2 basamaklı)
 - **Çoklu şekil desteği**: Aynı satırda 1, 2 veya 3 ayrı poligon olabilir; otomatik tespit edilir
 - **Alan hesaplama**: Shoelace formülü ile her poligonun alanı bulunur, ölçek `16` ile düzeltilir
@@ -51,7 +51,3 @@ Src/
 └── Curl ile kod cekme.txt    # curl kullanım notu
 ```
 
-## Geliştiriciler
-
-- Berk Karaoğlu
-- Arda Koçak
